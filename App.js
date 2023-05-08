@@ -1,20 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import Constants from 'expo-constants';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import Cadastro from './telas/Cadastro'
+import Login from './telas/Login'
+import Login2 from './telas/Login2'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style={styles.tela_fundo}>
       <StatusBar style="auto" />
+      {/* <Cadastro></Cadastro> */}
+      {/* <Login></Login> */}
+      <Login2></Login2>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+
+  tela_fundo: {
+    backgroundColor: 'rgb(238, 240, 239)',
+    marginTop: Constants.statusBarHeight,
+    height: '100%',
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center'
+
   },
+
+  image: {
+    width: 20,
+    height: 20
+  }
 });
+
